@@ -11,7 +11,7 @@ load.data <- function() {
 
 data <- load.data()
 data$date.time = strptime(paste(data$date, data$time), "%d/%m/%Y %H:%M:%S")
-png(filename="plot2.png")#, bg="transparent")
+png(filename="plot2.png", bg="transparent")
 plot(data$date.time, data$global.active.power, type="n",
      ylab="Global Active Power (kilowatts)", xlab="")
 lines(data$date.time, data$global.active.power)

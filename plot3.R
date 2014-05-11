@@ -11,7 +11,7 @@ load.data <- function() {
 
 data <- load.data()
 data$date.time = strptime(paste(data$date, data$time), "%d/%m/%Y %H:%M:%S")
-png(filename="plot3.png") #, bg="transparent")
+png(filename="plot3.png", bg="transparent")
 plot(data$date.time, data$Sub_metering_1, type="n",
      ylab="Energy sub metering", xlab="")
 lines(data$date.time, data$Sub_metering_1, col="black")

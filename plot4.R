@@ -11,7 +11,7 @@ load.data <- function() {
 
 data <- load.data()
 data$date.time = strptime(paste(data$date, data$time), "%d/%m/%Y %H:%M:%S")
-png(filename="plot4.png") #, bg="transparent")
+png(filename="plot4.png", bg="transparent")
 par(mfcol=c(2,2))
 
 #first plot
@@ -26,7 +26,7 @@ lines(data$date.time, data$Sub_metering_1, col="black")
 lines(data$date.time, data$Sub_metering_2, col="red")
 lines(data$date.time, data$Sub_metering_3, col="blue")
 legend("topright", col=c("black", "red", "blue"), lty=1, bty="n",
-       legend=c("Sub_metring_1", "Sub_metring_2", "Sub_metring_3"))
+       legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 #third plot
 plot(data$date.time, data$voltage, type="n",
